@@ -14,11 +14,11 @@ CMyDataFile::CMyDataFile()
 	BOOL ifFind = finder.FindFile(m_strFile);
 	if (!ifFind)
 	{
-		::WritePrivateProfileStringW(_T("Role Info"), _T("Role_1"), _T("0"), m_strFile);
+		::WritePrivateProfileStringW(_T("Role Info"), _T("Role_1"), _T("-1"), m_strFile);
 		::WritePrivateProfileStringW(_T("Role_1 Level Record"), _T("Level_1"), _T("0"), m_strFile);
-		::WritePrivateProfileStringW(_T("Role Info"), _T("Role_2"), _T("0"), m_strFile);
+		::WritePrivateProfileStringW(_T("Role Info"), _T("Role_2"), _T("-1"), m_strFile);
 		::WritePrivateProfileStringW(_T("Role_2 Level Record"), _T("Level_1"), _T("0"), m_strFile);
-		::WritePrivateProfileStringW(_T("Role Info"), _T("Role_3"), _T("0"), m_strFile);
+		::WritePrivateProfileStringW(_T("Role Info"), _T("Role_3"), _T("-1"), m_strFile);
 		::WritePrivateProfileStringW(_T("Role_3 Level Record"), _T("Level_1"), _T("0"), m_strFile);
 		Lock();
 	}

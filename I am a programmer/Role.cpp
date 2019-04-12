@@ -83,7 +83,7 @@ void Role::OnPaint()
 	lf.lfEscapement = -60;
 	font.CreateFontIndirect(&lf);
 	dc.SelectObject(&font);
-	if (role_1 == 0)
+	if (role_1 == -1)
 	{
 		dc.TextOutW(175,590,L"未创建");
 	}
@@ -97,7 +97,7 @@ void Role::OnPaint()
 	lf.lfEscapement = -10; 
 	font.CreateFontIndirect(&lf);
 	dc.SelectObject(&font);
-	if (role_2 == 0)
+	if (role_2 == -1)
 	{
 		dc.TextOutW(480, 608, L"未创建");
 	}
@@ -111,7 +111,7 @@ void Role::OnPaint()
 	lf.lfEscapement = 60;
 	font.CreateFontIndirect(&lf);
 	dc.SelectObject(&font);
-	if (role_3 == 0)
+	if (role_3 == -1)
 	{
 		dc.TextOutW(810, 597, L"未创建");
 	}
@@ -147,7 +147,7 @@ BOOL Role::OnInitDialog()
 void Role::OnBnClickedRoleDel1()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	m_data.setRoleL(1, 0);
+	m_data.setRoleL(1, -1);
 	InvalidateRect(NULL, FALSE);
 }
 
@@ -155,7 +155,7 @@ void Role::OnBnClickedRoleDel1()
 void Role::OnBnClickedRoleDel2()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	m_data.setRoleL(2, 0);
+	m_data.setRoleL(2, -1);
 	InvalidateRect(NULL, FALSE);
 }
 
@@ -163,7 +163,7 @@ void Role::OnBnClickedRoleDel2()
 void Role::OnBnClickedRoleDel3()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	m_data.setRoleL(3, 0);
+	m_data.setRoleL(3, -1);
 	InvalidateRect(NULL, FALSE);
 }
 
@@ -177,7 +177,6 @@ HBRUSH Role::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 	pDC->SetBkMode(TRANSPARENT);
 	hbr = (HBRUSH) ::GetStockObject(NULL_BRUSH);
 	}   */
-
 	//没办法，搞一个万能的。很奇怪，在背景是图片的情况下，nCtlColor都不等于CTLCOLOR_BTN了，但经过断点可以肯定，
 	//每个控件都会进入这个消息
 	UINT id = pWnd->GetDlgCtrlID();
@@ -206,9 +205,9 @@ void Role::OnBnClickedRoleBtn1()
 	// TODO: 在此添加控件通知处理程序代码
 	CDialogEx::OnOK();
 	int role_1 = m_data.getRoleL(1);
-	if(role_1 == 0 )
+	if(role_1 == -1)
 	{
-		m_data.setRoleL(1, 1);
+		m_data.setRoleL(1, 0);
 		InvalidateRect(NULL, FALSE);
 	}
 	Level Lchoose;
@@ -222,9 +221,9 @@ void Role::OnBnClickedRoleBtn2()
 	// TODO: 在此添加控件通知处理程序代码
 	CDialogEx::OnOK();
 	int role_2 = m_data.getRoleL(2);
-	if (role_2 == 0)
+	if (role_2 == -1)
 	{
-		m_data.setRoleL(2, 1);
+		m_data.setRoleL(2, 0);
 		InvalidateRect(NULL, FALSE);
 	}
 	Level Lchoose; 
@@ -238,9 +237,9 @@ void Role::OnBnClickedRoleBtn3()
 	// TODO: 在此添加控件通知处理程序代码
 	CDialogEx::OnOK();
 	int role_3 = m_data.getRoleL(3);
-	if (role_3 == 0)
+	if (role_3 == -1)
 	{
-		m_data.setRoleL(3, 1);
+		m_data.setRoleL(3, 0);
 		InvalidateRect(NULL, FALSE);
 	}
 	Level Lchoose;

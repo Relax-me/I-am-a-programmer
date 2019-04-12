@@ -185,6 +185,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Game.h" />
     <ClInclude Include="I am a programmer.h" />
     <ClInclude Include="I am a programmerDlg.h" />
     <ClInclude Include="Level.h" />
@@ -196,6 +197,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="I am a programmer.cpp" />
     <ClCompile Include="I am a programmerDlg.cpp" />
     <ClCompile Include="Level.cpp" />
@@ -224,7 +226,13 @@
     <Image Include="E:\Desktop\Src\start_bt0.bmp" />
     <Image Include="E:\Desktop\Src\start_bt1.bmp" />
     <Image Include="res\game.bmp" />
+    <Image Include="res\game_exit.bmp" />
+    <Image Include="res\game_fast.bmp" />
+    <Image Include="res\game_music.bmp" />
     <Image Include="res\game_OK.bmp" />
+    <Image Include="res\game_slow.bmp" />
+    <Image Include="res\game_start.bmp" />
+    <Image Include="res\game_stop.bmp" />
     <Image Include="res\I am a programmer.ico" />
     <Image Include="res\level.bmp" />
     <Image Include="res\level_back.bmp" />
