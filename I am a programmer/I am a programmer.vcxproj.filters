@@ -48,6 +48,24 @@
     <ClInclude Include="Game.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Operate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Calculate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Control.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Apply.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="In.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Out.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="I am a programmer.cpp">
@@ -72,6 +90,21 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Calculate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Control.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Apply.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="In.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Out.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

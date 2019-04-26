@@ -1,5 +1,6 @@
 #pragma once
 #include "afxwin.h"
+#include "Operate.h"
 
 
 // Game ¶Ô»°¿ò
@@ -40,4 +41,27 @@ public:
 	CBitmapButton m_btnStart;
 	CBitmapButton m_btnStop;
 	virtual BOOL OnInitDialog();
+	///////////////////////////
+	int in[50];
+	int inIndex;
+	int inNum;
+	//////////////////////////
+	int out[50];
+	int outTrue[50];
+	int outIndex;
+	int outNum;
+	//////////////////////////
+	int ram[20];
+	bool isRamUsed[20];
+	int ramUsesNum;
+	//////////////////////////
+	Operate* operate[1024];
+	int runIndex;
+	int operateLine;
+	int operateCount;
+	//////////////////////////
+	void Check();
+	void runError();
+	void runOk();
+	void initGame();
 };

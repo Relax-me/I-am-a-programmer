@@ -35,6 +35,7 @@ CMyDataFile::~CMyDataFile()
 
 void CMyDataFile::Lock()
 {  
+	if (!isLock)return;
 	CFile file_read(m_strFile, CFile::modeReadWrite);
 	int size = file_read.GetLength();
 	char *buffer = NULL;
@@ -54,6 +55,7 @@ void CMyDataFile::Lock()
 
 void CMyDataFile::UnLock()
 {
+	if (!isLock)return;
 	CFile file_read(m_strFile, CFile::modeReadWrite);
 	int size = file_read.GetLength();
 	char *buffer = NULL;

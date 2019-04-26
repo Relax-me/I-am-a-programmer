@@ -1,10 +1,13 @@
 #pragma once
-
+#define UNLOCK FALSE
+#define LOCK TRUE
 // CMyDataFile ÃüÁîÄ¿±ê
 
 class CMyDataFile : public CObject
 {
 public:
+	bool isLock = LOCK;
+	//////////////////////////////
 	CString m_strFile = L".//data";
 	CMyDataFile();
 	virtual ~CMyDataFile();
